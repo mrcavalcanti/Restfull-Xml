@@ -155,9 +155,9 @@ object Frm_Person: TFrm_Person
   object Label2: TLabel
     Left = 72
     Top = 248
-    Width = 213
+    Width = 210
     Height = 13
-    Caption = 'Exemplo de formato para o CEP: 029060-130'
+    Caption = 'Exemplo de formato para o CEP: 029060130'
   end
   object edtId: TEdit
     Left = 72

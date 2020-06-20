@@ -2,10 +2,10 @@ program DelphiRestDemo;
 
 uses
   Forms,
-  uFrm_Person in 'uFrm_Person.pas' {Frm_Person},
+  uFrm_Person in 'form\uFrm_Person.pas' {Frm_Person},
   uDM in 'Common\uDM.pas' {DM: TDataModule},
   Person in 'Common\Person.pas',
-  uFrm_PersonList in 'uFrm_PersonList.pas' {Frm_PersonList},
+  uFrm_PersonList in 'form\uFrm_PersonList.pas' {Frm_PersonList},
   uUtils in 'uUtils.pas',
   uMail in 'uMail.pas',
   superobject in 'lib\superobject\superobject.pas',

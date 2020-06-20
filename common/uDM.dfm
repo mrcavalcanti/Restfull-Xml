@@ -6,7 +6,7 @@ object DM: TDM
   Height = 453
   Width = 589
   object RestClient: TRestClient
-    ConnectionType = hctIndy
+    ConnectionType = hctWinHttp
     EnabledCompression = False
     Left = 24
     Top = 24

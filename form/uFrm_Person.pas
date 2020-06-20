@@ -136,22 +136,25 @@ var
     vCEP: String;
 begin
     vCEP := edtCEP.Text;
-    //if (TUtils.ChecaCEP(vCEP, '')) then
-    //begin
         vAddress := nil;
         try
             vAddress := DM.ObterCEP(vCEP);
+            if (vAddress <> nil) then
+            begin
+              edtLogradouro.Text := vAddress.logradouro;
+              edtComplemento.Text := vAddress.complemento;
+              edtBairro.Text := vAddress.bairro;
+              edtCidade.Text := vAddress.localidade;
+              edtEstado.Text := vAddress.uf;
+              edtEndereco.Text := vAddress.Endereco;
+            end
+            else
+            begin
+              ShowMessage('Erro ao obter CEP');
+            end;
         finally
-            edtLogradouro.Text := vAddress.logradouro;
-            edtComplemento.Text := vAddress.complemento;
-            edtBairro.Text := vAddress.bairro;
-            edtCidade.Text := vAddress.localidade;
-            edtEstado.Text := vAddress.uf;
-            edtEndereco.Text := vAddress.Endereco;
-
             FreeAndnil(vAddress);
         end;
-    //end;
 end;
 
 procedure TFrm_Person.edtCPFExit(Sender: TObject);
